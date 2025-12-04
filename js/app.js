@@ -8,17 +8,10 @@
 // ===================================
 const CONFIG = {
     dataPath: './data/profile.json',
-    postsPath: './data/posts/',
+    postsPath: './data/posts.json',
     typewriterSpeed: 80,
     typewriterPause: 2000,
 };
-
-// Blog posts manifest - add new posts here
-const BLOG_POSTS = [
-    'getting-started-with-llms.md',
-    'building-ml-pipelines.md',
-    'vector-databases-explained.md'
-];
 
 // ===================================
 // Data Loading
@@ -45,13 +38,13 @@ async function loadProfileData() {
 // ===================================
 // App Initialization
 // ===================================
-function initializeApp() {
+async function initializeApp() {
     populateHeroSection();
     populateAboutSection();
     populateExperience();
     populateEducation();
     populateProjects();
-    populateBlog();
+    await populateBlog();
     populateSkills();
     populateCertifications();
     populateContact();
@@ -553,78 +546,41 @@ let blogPostsData = [];
 
 async function populateBlog() {
     const blogGrid = document.getElementById('blogGrid');
-    blogPostsData = [];
 
-    // Load all blog posts
-    for (const postFile of BLOG_POSTS) {
-        try {
-            const response = await fetch(CONFIG.postsPath + postFile);
-            if (response.ok) {
-                const content = await response.text();
-                const post = parseMarkdownPost(content, postFile);
-                if (post) {
-                    blogPostsData.push(post);
-                }
-            }
-        } catch (error) {
-            console.error(`Error loading post ${postFile}:`, error);
-        }
-    }
+    try {
+        // Load blog posts from JSON
+        const response = await fetch(CONFIG.postsPath);
+        if (!response.ok) throw new Error('Failed to load blog posts');
+        blogPostsData = await response.json();
 
-    // Sort by date (newest first)
-    blogPostsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+        // Sort by date (newest first)
+        blogPostsData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // Render blog cards
-    blogGrid.innerHTML = blogPostsData.map(post => `
-        <div class="blog-card fade-in" data-post-id="${post.id}">
-            <div class="blog-card-header">
-                <div class="blog-card-meta">
-                    <span><i class="fas fa-calendar"></i> ${formatDate(post.date)}</span>
-                    <span><i class="fas fa-clock"></i> ${post.readTime}</span>
+        // Render blog cards
+        blogGrid.innerHTML = blogPostsData.map(post => `
+            <div class="blog-card fade-in" data-post-id="${post.id}">
+                <div class="blog-card-header">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> ${formatDate(post.date)}</span>
+                        <span><i class="fas fa-clock"></i> ${post.readTime}</span>
+                    </div>
+                    <h3 class="blog-card-title">${post.title}</h3>
                 </div>
-                <h3 class="blog-card-title">${post.title}</h3>
-            </div>
-            <p class="blog-card-excerpt">${post.excerpt}</p>
-            <div class="blog-card-footer">
-                <div class="blog-card-tags">
-                    ${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                <p class="blog-card-excerpt">${post.excerpt}</p>
+                <div class="blog-card-footer">
+                    <div class="blog-card-tags">
+                        ${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                    </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `).join('');
 
-    // Re-initialize scroll animations
-    initScrollAnimations();
-}
-
-function parseMarkdownPost(content, filename) {
-    // Parse frontmatter
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-    if (!frontmatterMatch) return null;
-
-    const frontmatter = frontmatterMatch[1];
-    const body = content.slice(frontmatterMatch[0].length).trim();
-
-    // Parse frontmatter fields
-    const post = {
-        filename,
-        body,
-        id: parseInt(frontmatter.match(/id:\s*(\d+)/)?.[1] || '0'),
-        title: frontmatter.match(/title:\s*(.+)/)?.[1] || 'Untitled',
-        excerpt: frontmatter.match(/excerpt:\s*(.+)/)?.[1] || '',
-        date: frontmatter.match(/date:\s*(.+)/)?.[1] || '',
-        readTime: frontmatter.match(/readTime:\s*(.+)/)?.[1] || '5 min',
-        featured: frontmatter.match(/featured:\s*(.+)/)?.[1] === 'true',
-        tags: []
-    };
-
-    // Parse tags
-    const tagsMatch = frontmatter.match(/tags:\s*\[([^\]]+)\]/);
-    if (tagsMatch) {
-        post.tags = tagsMatch[1].split(',').map(tag => tag.trim());
+        // Re-initialize scroll animations
+        initScrollAnimations();
+    } catch (error) {
+        console.error('Error loading blog posts:', error);
+        blogGrid.innerHTML = '<p style="color: var(--text-tertiary); text-align: center;">Blog posts coming soon...</p>';
     }
-
-    return post;
 }
 
 function formatDate(dateStr) {

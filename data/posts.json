@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Large Language Models",
+    "excerpt": "A comprehensive guide to understanding and working with LLMs like GPT, Claude, and open-source alternatives.",
+    "date": "2024-12-01",
+    "tags": ["LLM", "AI", "NLP", "Tutorial"],
+    "readTime": "8 min",
+    "featured": true,
+    "body": "# Getting Started with Large Language Models\n\nLarge Language Models (LLMs) have revolutionized the way we interact with AI. In this post, I'll walk you through the fundamentals of LLMs and how to get started with them.\n\n## What are LLMs?\n\nLLMs are neural networks trained on massive amounts of text data. They can understand context, generate human-like text, and perform a wide variety of language tasks.\n\n### Key Characteristics\n\n- **Scale**: Billions of parameters\n- **Versatility**: Can handle multiple tasks without task-specific training\n- **Context Understanding**: Can maintain context over long conversations\n\n## Popular LLMs\n\n1. **GPT-4** - OpenAI's flagship model\n2. **Claude** - Anthropic's helpful, harmless, and honest AI\n3. **Llama 2** - Meta's open-source model\n4. **Mistral** - Efficient open-source alternative\n\n## Getting Started\n\n```python\nfrom openai import OpenAI\n\nclient = OpenAI()\n\nresponse = client.chat.completions.create(\n    model=\"gpt-4\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"Hello, world!\"}\n    ]\n)\n\nprint(response.choices[0].message.content)\n```\n\n## Best Practices\n\n- Always validate outputs\n- Use system prompts for consistent behavior\n- Implement rate limiting\n- Consider cost optimization strategies\n\n## Conclusion\n\nLLMs are powerful tools that can transform how we build applications. Start experimenting today!"
+  },
+  {
+    "id": 2,
+    "title": "Building Production ML Pipelines",
+    "excerpt": "Learn how to build scalable and maintainable machine learning pipelines for production environments.",
+    "date": "2024-11-15",
+    "tags": ["MLOps", "Python", "AWS", "Pipeline"],
+    "readTime": "12 min",
+    "featured": true,
+    "body": "# Building Production ML Pipelines\n\nMoving from Jupyter notebooks to production-ready ML systems is one of the biggest challenges data scientists face. Here's my approach to building robust ML pipelines.\n\n## The Pipeline Architecture\n\nA well-designed ML pipeline consists of several key components:\n\n### 1. Data Ingestion\n- Automated data collection\n- Schema validation\n- Data versioning\n\n### 2. Feature Engineering\n- Feature stores for reusability\n- Real-time vs batch features\n- Feature monitoring\n\n### 3. Model Training\n- Experiment tracking\n- Hyperparameter optimization\n- Model versioning\n\n### 4. Model Deployment\n- A/B testing infrastructure\n- Canary deployments\n- Rollback mechanisms\n\n## Tools I Recommend\n\n| Component | Tool |\n|-----------|------|\n| Orchestration | Airflow / Prefect |\n| Feature Store | Feast |\n| Experiment Tracking | MLflow / W&B |\n| Model Serving | BentoML / Seldon |\n\n## Code Example\n\n```python\nfrom prefect import flow, task\n\n@task\ndef extract_data():\n    # Data extraction logic\n    pass\n\n@task\ndef transform_data(data):\n    # Feature engineering\n    pass\n\n@task\ndef train_model(features):\n    # Model training\n    pass\n\n@flow\ndef ml_pipeline():\n    data = extract_data()\n    features = transform_data(data)\n    model = train_model(features)\n    return model\n```\n\n## Key Takeaways\n\n1. Start simple, iterate fast\n2. Monitor everything\n3. Automate testing\n4. Document your decisions\n\nHappy building!"
+  },
+  {
+    "id": 3,
+    "title": "Vector Databases Explained",
+    "excerpt": "Understanding vector databases and their role in modern AI applications like semantic search and RAG.",
+    "date": "2024-10-28",
+    "tags": ["Vector DB", "RAG", "Embeddings", "AI"],
+    "readTime": "6 min",
+    "featured": false,
+    "body": "# Vector Databases Explained\n\nVector databases have become essential for building AI applications. Let's dive into what they are and why they matter.\n\n## What is a Vector Database?\n\nA vector database stores data as high-dimensional vectors (embeddings) and enables similarity search based on distance metrics.\n\n## Why Vector Databases?\n\nTraditional databases use exact matching. Vector databases find *similar* items:\n\n- Semantic search\n- Recommendation systems\n- Image similarity\n- RAG (Retrieval Augmented Generation)\n\n## Popular Options\n\n- **Pinecone** - Fully managed, easy to use\n- **Weaviate** - Open source, GraphQL API\n- **Milvus** - High performance, scalable\n- **Chroma** - Lightweight, great for prototyping\n\n## Quick Example\n\n```python\nimport chromadb\n\nclient = chromadb.Client()\ncollection = client.create_collection(\"my_docs\")\n\n# Add documents\ncollection.add(\n    documents=[\"AI is transforming industries\", \"Machine learning basics\"],\n    ids=[\"doc1\", \"doc2\"]\n)\n\n# Query\nresults = collection.query(\n    query_texts=[\"artificial intelligence applications\"],\n    n_results=1\n)\n```\n\n## When to Use\n\nUse vector databases when you need:\n- Semantic understanding of queries\n- Finding similar items at scale\n- Building RAG applications\n\nThey're not a replacement for traditional databases but a complement for AI-powered features."
+  }
+]
