@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heera Lal | AI Engineer & Data Scientist</title>
+    <meta name="description" content="Portfolio of Heera Lal - Senior Data Scientist & AI Engineer specializing in Machine Learning, Deep Learning, and Generative AI">
+    <meta name="keywords" content="AI Engineer, Data Scientist, Machine Learning, Deep Learning, Python, TensorFlow, PyTorch">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://github.com/heera-ai.png">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">HL</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Hi, I'm</span>
+                <span class="title-name" id="heroName">Heera Lal</span>
+            </h1>
+            <div class="hero-subtitle">
+                <span class="subtitle-prefix">&gt;</span>
+                <span class="typewriter" id="typewriter"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description" id="heroDescription">
+                Transforming data into intelligence, one model at a time
+            </p>
+            <div class="hero-stats" id="heroStats">
+                <!-- Populated by JS -->
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-social" id="heroSocial">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="avatar-container">
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring avatar-ring-2"></div>
+                <img src="" alt="Heera Lal" class="avatar-image" id="avatarImage">
+            </div>
+            <div class="floating-cards">
+                <div class="float-card float-card-1">
+                    <i class="fas fa-brain"></i>
+                    <span>Deep Learning</span>
+                </div>
+                <div class="float-card float-card-2">
+                    <i class="fas fa-robot"></i>
+                    <span>LLMs</span>
+                </div>
+                <div class="float-card float-card-3">
+                    <i class="fas fa-chart-line"></i>
+                    <span>ML Ops</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-bio" id="aboutBio"></p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="aboutLocation"></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span id="aboutTitle"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-achievements" id="aboutAchievements">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            <div class="interests-section">
+                <h3 class="interests-title">Current Interests</h3>
+                <div class="interests-cloud" id="interestsCloud">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/about&gt;</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="timeline" id="experienceTimeline">
+                <!-- Populated by JS -->
+            </div>
+            <span class="section-tag section-tag-close">&lt;/experience&gt;</span>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="education-grid" id="educationGrid">
+                <!-- Populated by JS -->
+            </div>
+            <span class="section-tag section-tag-close">&lt;/education&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Populated by JS -->
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/heera-ai" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    <span>View All on GitHub</span>
+                </a>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/projects&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech Stack</h2>
+            </div>
+            <div class="skills-container" id="skillsContainer">
+                <!-- Populated by JS -->
+            </div>
+            <span class="section-tag section-tag-close">&lt;/skills&gt;</span>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;certifications&gt;</span>
+                <h2 class="section-title">Certifications</h2>
+            </div>
+            <div class="certifications-grid" id="certificationsGrid">
+                <!-- Populated by JS -->
+            </div>
+            <span class="section-tag section-tag-close">&lt;/certifications&gt;</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>I'm always excited to discuss new opportunities, collaborate on interesting projects, or just chat about AI and technology.</p>
+                </div>
+                <div class="contact-links" id="contactLinks">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="contact-email">
+                    <a href="" class="email-link" id="emailLink">
+                        <i class="fas fa-envelope"></i>
+                        <span id="emailText"></span>
+                    </a>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/contact&gt;</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="footer-code">&lt;/&gt;</span> with
+                    <span class="footer-heart">♥</span> by
+                    <span id="footerName">Heera Lal</span>
+                </p>
+                <p class="footer-year">&copy; <span id="currentYear"></span> All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

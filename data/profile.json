@@ -1,0 +1,213 @@
+{
+  "personal": {
+    "name": "Heera Lal",
+    "title": "Senior Data Scientist & AI Engineer",
+    "tagline": "Transforming data into intelligence, one model at a time",
+    "bio": "Passionate AI Engineer with expertise in machine learning, deep learning, and data science. I build intelligent systems that solve real-world problems. Currently exploring the frontiers of generative AI and large language models.",
+    "location": "Hyderabad, India",
+    "email": "heeralallegha@gmail.com",
+    "website": "https://heeralal.in",
+    "avatar": "https://github.com/heera-ai.png",
+    "resumeUrl": "#"
+  },
+  "social": {
+    "github": "https://github.com/heera-ai",
+    "linkedin": "https://www.linkedin.com/in/heera-lal-518614136/",
+    "twitter": "",
+    "medium": ""
+  },
+  "skills": {
+    "languages": ["Python", "SQL", "R", "JavaScript"],
+    "ml_frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "XGBoost"],
+    "ai_tools": ["LangChain", "OpenAI API", "Hugging Face", "MLflow", "Weights & Biases"],
+    "data_tools": ["Pandas", "NumPy", "Spark", "Airflow", "dbt"],
+    "cloud": ["AWS", "GCP", "Azure ML", "Docker", "Kubernetes"],
+    "databases": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Vector DBs"]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "Senior Data Scientist",
+      "company": "Your Company Name",
+      "location": "Hyderabad, India",
+      "period": "2022 - Present",
+      "description": "Leading AI initiatives and building production ML systems",
+      "highlights": [
+        "Developed end-to-end ML pipelines serving 1M+ predictions daily",
+        "Built recommendation systems improving user engagement by 35%",
+        "Led a team of 4 data scientists on NLP projects",
+        "Implemented MLOps practices reducing deployment time by 60%"
+      ],
+      "technologies": ["Python", "TensorFlow", "AWS", "Kubernetes"]
+    },
+    {
+      "id": 2,
+      "role": "Data Scientist",
+      "company": "Previous Company",
+      "location": "India",
+      "period": "2020 - 2022",
+      "description": "Built machine learning models and data pipelines",
+      "highlights": [
+        "Created sentiment analysis models with 92% accuracy",
+        "Developed fraud detection system saving $2M annually",
+        "Built automated reporting dashboards for stakeholders"
+      ],
+      "technologies": ["Python", "Scikit-learn", "SQL", "Tableau"]
+    },
+    {
+      "id": 3,
+      "role": "ML Engineer",
+      "company": "Earlier Company",
+      "location": "India",
+      "period": "2018 - 2020",
+      "description": "Developed and deployed machine learning solutions",
+      "highlights": [
+        "Built customer churn prediction models",
+        "Implemented A/B testing frameworks",
+        "Created data visualization dashboards"
+      ],
+      "technologies": ["Python", "R", "SQL", "Power BI"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Master's in Data Science / Computer Science",
+      "institution": "Your University",
+      "location": "India",
+      "period": "2016 - 2018",
+      "description": "Specialized in Machine Learning and Statistical Analysis",
+      "achievements": [
+        "Thesis on Deep Learning for Computer Vision",
+        "Published 2 research papers"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Bachelor's in Engineering / Computer Science",
+      "institution": "Your University",
+      "location": "India",
+      "period": "2012 - 2016",
+      "description": "Foundation in Computer Science and Mathematics",
+      "achievements": [
+        "Dean's List",
+        "Led technical club"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Emotion Detection System",
+      "description": "Real-time facial emotion recognition using deep learning. Detects 7 different emotions from video streams with high accuracy.",
+      "image": "",
+      "technologies": ["Python", "TensorFlow", "OpenCV", "CNN"],
+      "github": "https://github.com/heera-ai/emotion_detection",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Movie Sentiment Analyzer",
+      "description": "NLP-based sentiment analysis for movie reviews. Classifies reviews as positive or negative using advanced text processing techniques.",
+      "image": "",
+      "technologies": ["Python", "NLP", "Jupyter", "NLTK"],
+      "github": "https://github.com/heera-ai/movie_sentiment",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Spam Classifier",
+      "description": "Machine learning model to detect and filter spam messages with high precision and recall.",
+      "image": "",
+      "technologies": ["Python", "Scikit-learn", "NLP", "Flask"],
+      "github": "https://github.com/heera-ai/SpamClassifier",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Database Generator",
+      "description": "Automated database creation tool for educational institutions. Generates sample data for colleges, schools, and universities.",
+      "image": "",
+      "technologies": ["Python", "SQL", "SQLite", "Faker"],
+      "github": "https://github.com/heera-ai/db_examples",
+      "demo": "",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "name": "LLM-Powered Chatbot",
+      "description": "Conversational AI assistant built with modern LLM frameworks. Features context awareness and multi-turn dialogue.",
+      "image": "",
+      "technologies": ["Python", "LangChain", "OpenAI", "FastAPI"],
+      "github": "",
+      "demo": "",
+      "featured": true
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "icon": "🏆",
+      "title": "Arctic Code Vault Contributor",
+      "description": "Contributed to repositories preserved in GitHub's Arctic Code Vault"
+    },
+    {
+      "id": 2,
+      "icon": "🦈",
+      "title": "Pull Shark",
+      "description": "Recognized for significant open source contributions"
+    },
+    {
+      "id": 3,
+      "icon": "📊",
+      "title": "44+ Repositories",
+      "description": "Active open source contributor with diverse projects"
+    },
+    {
+      "id": 4,
+      "icon": "🎯",
+      "title": "ML in Production",
+      "description": "Deployed models serving millions of predictions"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "AWS Certified Machine Learning - Specialty",
+      "issuer": "Amazon Web Services",
+      "year": "2023",
+      "url": ""
+    },
+    {
+      "id": 2,
+      "name": "TensorFlow Developer Certificate",
+      "issuer": "Google",
+      "year": "2022",
+      "url": ""
+    },
+    {
+      "id": 3,
+      "name": "Deep Learning Specialization",
+      "issuer": "Coursera / DeepLearning.AI",
+      "year": "2021",
+      "url": ""
+    }
+  ],
+  "interests": [
+    "Generative AI",
+    "Large Language Models",
+    "Computer Vision",
+    "MLOps",
+    "Open Source",
+    "Tech Blogging"
+  ],
+  "stats": {
+    "yearsExperience": "6+",
+    "projectsCompleted": "50+",
+    "modelsDeployed": "20+",
+    "coffeeConsumed": "∞"
+  }
+}
