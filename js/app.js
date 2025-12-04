@@ -8,9 +8,17 @@
 // ===================================
 const CONFIG = {
     dataPath: './data/profile.json',
+    postsPath: './data/posts/',
     typewriterSpeed: 80,
     typewriterPause: 2000,
 };
+
+// Blog posts manifest - add new posts here
+const BLOG_POSTS = [
+    'getting-started-with-llms.md',
+    'building-ml-pipelines.md',
+    'vector-databases-explained.md'
+];
 
 // ===================================
 // Data Loading
@@ -43,6 +51,7 @@ function initializeApp() {
     populateExperience();
     populateEducation();
     populateProjects();
+    populateBlog();
     populateSkills();
     populateCertifications();
     populateContact();
@@ -53,6 +62,7 @@ function initializeApp() {
     initScrollAnimations();
     initTypewriter();
     initProjectFilters();
+    initBlogModal();
 }
 
 // ===================================
@@ -99,6 +109,13 @@ function populateHeroSection() {
         socialContainer.innerHTML += `
             <a href="${social.linkedin}" target="_blank" class="social-link" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
+            </a>
+        `;
+    }
+    if (social.youtube) {
+        socialContainer.innerHTML += `
+            <a href="${social.youtube}" target="_blank" class="social-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
             </a>
         `;
     }
@@ -326,6 +343,13 @@ function populateContact() {
             </a>
         `;
     }
+    if (social.youtube) {
+        contactContainer.innerHTML += `
+            <a href="${social.youtube}" target="_blank" class="contact-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        `;
+    }
     if (social.twitter) {
         contactContainer.innerHTML += `
             <a href="${social.twitter}" target="_blank" class="contact-link" aria-label="Twitter">
@@ -520,6 +544,178 @@ function initProjectFilters() {
             populateProjects(filter);
         });
     });
+}
+
+// ===================================
+// Blog Section
+// ===================================
+let blogPostsData = [];
+
+async function populateBlog() {
+    const blogGrid = document.getElementById('blogGrid');
+    blogPostsData = [];
+
+    // Load all blog posts
+    for (const postFile of BLOG_POSTS) {
+        try {
+            const response = await fetch(CONFIG.postsPath + postFile);
+            if (response.ok) {
+                const content = await response.text();
+                const post = parseMarkdownPost(content, postFile);
+                if (post) {
+                    blogPostsData.push(post);
+                }
+            }
+        } catch (error) {
+            console.error(`Error loading post ${postFile}:`, error);
+        }
+    }
+
+    // Sort by date (newest first)
+    blogPostsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Render blog cards
+    blogGrid.innerHTML = blogPostsData.map(post => `
+        <div class="blog-card fade-in" data-post-id="${post.id}">
+            <div class="blog-card-header">
+                <div class="blog-card-meta">
+                    <span><i class="fas fa-calendar"></i> ${formatDate(post.date)}</span>
+                    <span><i class="fas fa-clock"></i> ${post.readTime}</span>
+                </div>
+                <h3 class="blog-card-title">${post.title}</h3>
+            </div>
+            <p class="blog-card-excerpt">${post.excerpt}</p>
+            <div class="blog-card-footer">
+                <div class="blog-card-tags">
+                    ${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Re-initialize scroll animations
+    initScrollAnimations();
+}
+
+function parseMarkdownPost(content, filename) {
+    // Parse frontmatter
+    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    if (!frontmatterMatch) return null;
+
+    const frontmatter = frontmatterMatch[1];
+    const body = content.slice(frontmatterMatch[0].length).trim();
+
+    // Parse frontmatter fields
+    const post = {
+        filename,
+        body,
+        id: parseInt(frontmatter.match(/id:\s*(\d+)/)?.[1] || '0'),
+        title: frontmatter.match(/title:\s*(.+)/)?.[1] || 'Untitled',
+        excerpt: frontmatter.match(/excerpt:\s*(.+)/)?.[1] || '',
+        date: frontmatter.match(/date:\s*(.+)/)?.[1] || '',
+        readTime: frontmatter.match(/readTime:\s*(.+)/)?.[1] || '5 min',
+        featured: frontmatter.match(/featured:\s*(.+)/)?.[1] === 'true',
+        tags: []
+    };
+
+    // Parse tags
+    const tagsMatch = frontmatter.match(/tags:\s*\[([^\]]+)\]/);
+    if (tagsMatch) {
+        post.tags = tagsMatch[1].split(',').map(tag => tag.trim());
+    }
+
+    return post;
+}
+
+function formatDate(dateStr) {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+    });
+}
+
+// ===================================
+// Blog Modal
+// ===================================
+function initBlogModal() {
+    // Create modal element
+    const modal = document.createElement('div');
+    modal.className = 'blog-modal';
+    modal.id = 'blogModal';
+    modal.innerHTML = `
+        <div class="blog-modal-overlay"></div>
+        <div class="blog-modal-content">
+            <div class="blog-modal-header">
+                <div>
+                    <h2 class="blog-modal-title" id="modalTitle"></h2>
+                    <div class="blog-modal-meta" id="modalMeta"></div>
+                </div>
+                <button class="blog-modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="blog-modal-body">
+                <div class="markdown-content" id="modalBody"></div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Event listeners
+    const overlay = modal.querySelector('.blog-modal-overlay');
+    const closeBtn = document.getElementById('modalClose');
+
+    overlay.addEventListener('click', closeBlogModal);
+    closeBtn.addEventListener('click', closeBlogModal);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeBlogModal();
+    });
+
+    // Blog card click handlers
+    document.addEventListener('click', (e) => {
+        const card = e.target.closest('.blog-card');
+        if (card) {
+            const postId = parseInt(card.dataset.postId);
+            openBlogPost(postId);
+        }
+    });
+}
+
+function openBlogPost(postId) {
+    const post = blogPostsData.find(p => p.id === postId);
+    if (!post) return;
+
+    const modal = document.getElementById('blogModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMeta = document.getElementById('modalMeta');
+    const modalBody = document.getElementById('modalBody');
+
+    modalTitle.textContent = post.title;
+    modalMeta.innerHTML = `
+        <span><i class="fas fa-calendar"></i> ${formatDate(post.date)}</span>
+        <span><i class="fas fa-clock"></i> ${post.readTime}</span>
+        <span><i class="fas fa-tags"></i> ${post.tags.join(', ')}</span>
+    `;
+
+    // Parse markdown to HTML
+    if (typeof marked !== 'undefined') {
+        modalBody.innerHTML = marked.parse(post.body);
+    } else {
+        modalBody.innerHTML = `<pre>${post.body}</pre>`;
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBlogModal() {
+    const modal = document.getElementById('blogModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 // ===================================
