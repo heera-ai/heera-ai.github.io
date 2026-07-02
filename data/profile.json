@@ -1,0 +1,270 @@
+{
+  "personal": {
+    "name": "Heera Lal",
+    "title": "Senior Data Scientist & AI Engineer",
+    "tagline": "Building production AI — GenAI, RAG pipelines, and agentic systems at scale",
+    "bio": "Senior Data Scientist with 5+ years building end-to-end ML systems at scale. Specialized in GenAI, RAG pipelines, and Agentic AI platforms. Published at IEEE ICDSAAI. Proven track record delivering production ML across e-commerce, insurance, and telecom.",
+    "location": "Hyderabad, India",
+    "email": "heeralallegha@gmail.com",
+    "website": "https://heeralal.in",
+    "avatar": "https://github.com/heera-ai.png",
+    "resumeUrl": "#"
+  },
+  "social": {
+    "github": "https://github.com/heera-ai",
+    "linkedin": "https://www.linkedin.com/in/heera-lal-ai",
+    "youtube": "https://www.youtube.com/@heera_ai",
+    "twitter": "",
+    "medium": ""
+  },
+  "skills": {
+    "languages": [
+      "Python",
+      "SQL",
+      "PySpark"
+    ],
+    "ml_frameworks": [
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "Scikit-learn",
+      "XGBoost",
+      "LightGBM"
+    ],
+    "ai_tools": [
+      "Hugging Face Transformers",
+      "LangChain",
+      "LlamaIndex",
+      "Ollama",
+      "Sentence-Transformers"
+    ],
+    "data_tools": [
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Apache Spark",
+      "Airflow",
+      "MLflow"
+    ],
+    "cloud": [
+      "Azure",
+      "Docker",
+      "Git"
+    ],
+    "databases": [
+      "Elasticsearch",
+      "ChromaDB",
+      "Pinecone",
+      "MongoDB",
+      "SQLite"
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "Senior Data Scientist",
+      "company": "Qualcomm India Pvt Limited",
+      "location": "Hyderabad, India",
+      "period": "Sep 2024 - Present",
+      "description": "Enterprise AI — building the company's RAG and agentic AI platform.",
+      "highlights": [
+        "Architected a data-source-agnostic ingestion pipeline supporting SharePoint, Jira, Confluence, Orbit, and custom sources, enabling seamless onboarding without platform-specific code changes.",
+        "Engineered a scalable vector database layer to index and retrieve from millions of documents with low-latency similarity search for enterprise knowledge management.",
+        "Built a hybrid retrieval system combining keyword (BM25) and semantic (dense embedding) search, improving answer relevance and recall across diverse query types.",
+        "Delivered an agentic chat platform via Chat UI, REST APIs, and SDK, enabling teams to build and scale AI-powered applications on the RAG infrastructure."
+      ],
+      "technologies": [
+        "RAG",
+        "Vector DB",
+        "BM25",
+        "Embeddings",
+        "LLMs",
+        "Python"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Senior Data Scientist",
+      "company": "Jio Platforms Limited",
+      "location": "Hyderabad, India",
+      "period": "May 2022 - Sep 2024",
+      "description": "AI Center of Excellence (AICoE) — production ML for large-scale e-commerce.",
+      "highlights": [
+        "Built an end-to-end return-prediction microservice for a large-scale e-commerce platform, forecasting return probability at item and cart levels; contributed to measurable reduction in return rates.",
+        "Implemented ML-driven trade discount optimization combining forecasting and constrained optimization, improving gross margins while meeting revenue targets — published at IEEE ICDSAAI.",
+        "Designed a customer analytics platform for cohort curation enabling fraud detection, premium customer identification, and graph-based community detection.",
+        "Developed an intelligent information extraction system processing unstructured data (PDFs, images, text) using LLMs, significantly accelerating data extraction vs. manual workflows."
+      ],
+      "technologies": [
+        "Python",
+        "Forecasting",
+        "Optimization",
+        "LLMs",
+        "Graph ML"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Data Scientist",
+      "company": "Xceedance India Pvt Ltd",
+      "location": "Gurugram, India",
+      "period": "Jul 2021 - May 2022",
+      "description": "Information Retrieval System — NLP for insurance documents.",
+      "highlights": [
+        "Built an end-to-end information extraction pipeline from contractual emails using advanced NLP techniques, achieving 70%+ accuracy at launch.",
+        "Designed insurance entity extraction from contractual documents using YOLOv5, achieving 80%+ operational accuracy."
+      ],
+      "technologies": [
+        "NLP",
+        "YOLOv5",
+        "Python"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "M.Tech in Biomedical Engineering",
+      "institution": "Indian Institute of Technology, Hyderabad",
+      "location": "Hyderabad, India",
+      "period": "2019 - 2021",
+      "description": "CGPA 9.5/10.",
+      "achievements": [
+        "Academic Excellence Award 2020-2021"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "B.Tech in Electronic Instrumentation & Control Engineering",
+      "institution": "Government Engineering College, Ajmer",
+      "location": "Ajmer, India",
+      "period": "2014 - 2018",
+      "description": "72.76%.",
+      "achievements": [
+        "6th merit in Rajasthan Technical University, Kota (2018)",
+        "GATE AIR 503 in Instrumentation Engineering (2019)"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "Trade Discount Optimization for E-Commerce Platform",
+      "venue": "ICDSAAI 2023, IEEE — International Conference on Data Science, Agents & Artificial Intelligence",
+      "url": "https://ieeexplore.ieee.org/document/10452543"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Real-Time Facial Expression Detection",
+      "description": "CNN-based model for real-time facial emotion recognition from a webcam feed; deployed locally via Flask with live overlay rendering.",
+      "image": "",
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "OpenCV",
+        "CNN"
+      ],
+      "github": "https://github.com/heera-ai/emotion_detection",
+      "demo": "https://www.youtube.com/watch?v=skrUapHD4sg",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Movie Sentiment Analyzer",
+      "description": "NLP sentiment analysis for movie reviews using a Naive Bayes classifier; deployed via Streamlit for real-time prediction.",
+      "image": "",
+      "technologies": [
+        "Python",
+        "NLP",
+        "NLTK",
+        "Streamlit"
+      ],
+      "github": "https://github.com/heera-ai/movie_sentiment",
+      "demo": "https://share.streamlit.io/heerendrachoudhary/movie_sentiment/main/main.py",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Spam Classifier",
+      "description": "Machine learning model to detect and filter spam messages with high precision and recall.",
+      "image": "",
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "NLP",
+        "Flask"
+      ],
+      "github": "https://github.com/heera-ai/SpamClassifier",
+      "demo": "",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "name": "Database Generator",
+      "description": "Automated sample-database creation tool for educational institutions (colleges, schools, universities).",
+      "image": "",
+      "technologies": [
+        "Python",
+        "SQL",
+        "SQLite",
+        "Faker"
+      ],
+      "github": "https://github.com/heera-ai/db_examples",
+      "demo": "",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "name": "LLM-Powered Chatbot",
+      "description": "Conversational AI assistant built with modern LLM frameworks. Features context awareness and multi-turn dialogue.",
+      "image": "",
+      "technologies": [
+        "Python",
+        "LangChain",
+        "FastAPI"
+      ],
+      "github": "",
+      "demo": "",
+      "featured": false
+    }
+  ],
+  "achievements": [
+    {
+      "id": 3,
+      "icon": "📊",
+      "title": "Open Source Contributor",
+      "description": "Active across diverse ML and data-science repositories"
+    },
+    {
+      "id": 4,
+      "icon": "🎯",
+      "title": "ML in Production",
+      "description": "Shipped production ML across e-commerce, insurance, and telecom"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "TensorFlow Developer Certificate",
+      "issuer": "DeepLearning.AI — Coursera Specialization",
+      "year": "2022",
+      "url": "https://coursera.org/share/520a9e0ee99ceebb671d06214a0433be"
+    }
+  ],
+  "interests": [
+    "Generative AI",
+    "Large Language Models",
+    "RAG & Agentic AI",
+    "Computer Vision",
+    "MLOps",
+    "Open Source"
+  ],
+  "stats": {
+    "yearsExperience": "5+",
+    "projectsCompleted": "20+",
+    "modelsDeployed": "15+",
+    "coffeeConsumed": "∞"
+  }
+}
