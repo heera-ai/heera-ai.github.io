@@ -3,293 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heera Lal | AI Engineer & Data Scientist</title>
-    <meta name="description" content="Portfolio of Heera Lal - Senior Data Scientist & AI Engineer specializing in Machine Learning, Deep Learning, and Generative AI">
-    <meta name="keywords" content="AI Engineer, Data Scientist, Machine Learning, Deep Learning, Python, TensorFlow, PyTorch">
+    <title>Heera Lal — Senior Data Scientist · GenAI, RAG &amp; Agentic AI</title>
+    <meta name="description" content="Heera Lal is a Senior Data Scientist at Qualcomm Enterprise AI, building RAG and agentic-AI platforms over millions of enterprise documents. IEEE published. IIT Hyderabad.">
+    <meta name="keywords" content="Heera Lal, Senior Data Scientist, GenAI, RAG, Agentic AI, LLM, Machine Learning, Qualcomm, IIT Hyderabad">
+    <link rel="canonical" href="https://heera-ai.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Heera Lal — Senior Data Scientist · GenAI, RAG &amp; Agentic AI">
+    <meta property="og:description" content="I turn millions of documents into answers. Enterprise RAG &amp; agentic-AI platforms at Qualcomm. IEEE published. IIT Hyderabad.">
+    <meta property="og:url" content="https://heera-ai.github.io/">
+    <meta property="og:image" content="https://github.com/heera-ai.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://github.com/heera-ai.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Heera Lal",
+      "jobTitle": "Senior Data Scientist",
+      "worksFor": { "@type": "Organization", "name": "Qualcomm" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology, Hyderabad" },
+      "url": "https://heera-ai.github.io/",
+      "image": "https://github.com/heera-ai.png",
+      "email": "mailto:heeralallegha@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressCountry": "IN" },
+      "sameAs": [
+        "https://github.com/heera-ai",
+        "https://www.linkedin.com/in/heera-lal-ai",
+        "https://www.youtube.com/@heera_ai"
+      ],
+      "knowsAbout": ["Generative AI", "Retrieval-Augmented Generation", "Agentic AI", "Large Language Models", "Machine Learning", "NLP"]
+    }
+    </script>
 </head>
 <body>
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">HL</span>
-                <span class="logo-bracket">/&gt;</span>
+    <header class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#top" class="nav-brand">
+                <span class="brand-mark">HL</span>
+                <span class="brand-name">Heera&nbsp;Lal</span>
             </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <nav class="nav-links" id="navLinks" aria-label="Sections">
+                <a href="#systems">Systems</a>
+                <a href="#experience">Experience</a>
+                <a href="#opensource">Open source</a>
+                <a href="#writing">Writing</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span>
             </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg">
-            <div class="hero-grid"></div>
-            <div class="hero-gradient"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Available for opportunities</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line">Hi, I'm</span>
-                <span class="title-name" id="heroName">Heera Lal</span>
-            </h1>
-            <div class="hero-subtitle">
-                <span class="subtitle-prefix">&gt;</span>
-                <span class="typewriter" id="typewriter"></span>
-                <span class="cursor">|</span>
-            </div>
-            <p class="hero-description" id="heroDescription">
-                Transforming data into intelligence, one model at a time
-            </p>
-            <div class="hero-stats" id="heroStats">
-                <!-- Populated by JS -->
-            </div>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View My Work</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Get In Touch</span>
-                </a>
-            </div>
-            <div class="hero-social" id="heroSocial">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="avatar-container">
-                <div class="avatar-ring"></div>
-                <div class="avatar-ring avatar-ring-2"></div>
-                <img src="" alt="Heera Lal" class="avatar-image" id="avatarImage">
-            </div>
-            <div class="floating-cards">
-                <div class="float-card float-card-1">
-                    <i class="fas fa-brain"></i>
-                    <span>Deep Learning</span>
-                </div>
-                <div class="float-card float-card-2">
-                    <i class="fas fa-robot"></i>
-                    <span>LLMs</span>
-                </div>
-                <div class="float-card float-card-3">
-                    <i class="fas fa-chart-line"></i>
-                    <span>ML Ops</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
-        </div>
-    </section>
+    <main id="main">
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;about&gt;</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-bio" id="aboutBio"></p>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span id="aboutLocation"></span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span id="aboutTitle"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-achievements" id="aboutAchievements">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-            <div class="interests-section">
-                <h3 class="interests-title">Current Interests</h3>
-                <div class="interests-cloud" id="interestsCloud">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-            <span class="section-tag section-tag-close">&lt;/about&gt;</span>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;experience&gt;</span>
-                <h2 class="section-title">Work Experience</h2>
-            </div>
-            <div class="timeline" id="experienceTimeline">
-                <!-- Populated by JS -->
-            </div>
-            <span class="section-tag section-tag-close">&lt;/experience&gt;</span>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;education&gt;</span>
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="education-grid" id="educationGrid">
-                <!-- Populated by JS -->
-            </div>
-            <span class="section-tag section-tag-close">&lt;/education&gt;</span>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;projects&gt;</span>
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="featured">Featured</button>
-            </div>
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Populated by JS -->
-            </div>
-            <div class="projects-cta">
-                <a href="https://github.com/heera-ai" target="_blank" class="btn btn-outline">
-                    <i class="fab fa-github"></i>
-                    <span>View All on GitHub</span>
-                </a>
-            </div>
-            <span class="section-tag section-tag-close">&lt;/projects&gt;</span>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;blog&gt;</span>
-                <h2 class="section-title">Latest Posts</h2>
-            </div>
-            <div class="blog-grid" id="blogGrid">
-                <!-- Populated by JS -->
-            </div>
-            <span class="section-tag section-tag-close">&lt;/blog&gt;</span>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;skills&gt;</span>
-                <h2 class="section-title">Tech Stack</h2>
-            </div>
-            <div class="skills-container" id="skillsContainer">
-                <!-- Populated by JS -->
-            </div>
-            <span class="section-tag section-tag-close">&lt;/skills&gt;</span>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;certifications&gt;</span>
-                <h2 class="section-title">Certifications</h2>
-            </div>
-            <div class="certifications-grid" id="certificationsGrid">
-                <!-- Populated by JS -->
-            </div>
-            <span class="section-tag section-tag-close">&lt;/certifications&gt;</span>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;contact&gt;</span>
-                <h2 class="section-title">Let's Connect</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-text">
-                    <p>I'm always excited to discuss new opportunities, collaborate on interesting projects, or just chat about AI and technology.</p>
-                </div>
-                <div class="contact-links" id="contactLinks">
-                    <!-- Populated by JS -->
-                </div>
-                <div class="contact-email">
-                    <a href="" class="email-link" id="emailLink">
-                        <i class="fas fa-envelope"></i>
-                        <span id="emailText"></span>
-                    </a>
-                </div>
-            </div>
-            <span class="section-tag section-tag-close">&lt;/contact&gt;</span>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    <span class="footer-code">&lt;/&gt;</span> with
-                    <span class="footer-heart">♥</span> by
-                    <span id="footerName">Heera Lal</span>
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <p class="hero-eyebrow"><img src="https://github.com/heera-ai.png" alt="" class="hero-avatar">Senior Data Scientist · Enterprise AI @ Qualcomm</p>
+                <h1 class="hero-title">I turn millions of<br>documents into <em>answers</em>.</h1>
+                <p class="hero-sub">
+                    I build the retrieval and agent infrastructure behind enterprise GenAI —
+                    permission-aware ingestion, hybrid search, and agentic platforms that let
+                    every team ship AI applications on their own knowledge.
                 </p>
-                <p class="footer-year">&copy; <span id="currentYear"></span> All rights reserved.</p>
+                <ul class="hero-proof" aria-label="Credentials">
+                    <li>IEEE published</li>
+                    <li>IIT Hyderabad</li>
+                    <li>5+ years of production ML</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#systems" class="btn btn-solid">See the systems</a>
+                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+                </div>
             </div>
+
+            <!-- Signature: retrieval console -->
+            <div class="console" role="img" aria-label="A playful search console retrieving Heera's top credentials: Qualcomm's agentic RAG platform, an IEEE publication, and IIT Hyderabad">
+                <div class="console-bar">
+                    <span class="console-dot"></span><span class="console-dot"></span><span class="console-dot"></span>
+                    <span class="console-title">hybrid-retrieval · bm25 + dense</span>
+                </div>
+                <div class="console-body">
+                    <p class="console-query"><span class="prompt">$</span> retrieve <span class="q">"who builds GenAI that actually ships?"</span></p>
+                    <p class="console-meta">top 3 chunks · reranked</p>
+                    <a class="chunk" href="#systems">
+                        <span class="chunk-score">0.97</span>
+                        <span class="chunk-text"><strong>Qualcomm · Enterprise AI</strong> — agentic RAG platform over millions of enterprise documents</span>
+                        <span class="chunk-src">→ systems</span>
+                    </a>
+                    <a class="chunk" href="#publication">
+                        <span class="chunk-score">0.94</span>
+                        <span class="chunk-text"><strong>IEEE ICDSAAI</strong> — trade-discount optimization for e-commerce, published</span>
+                        <span class="chunk-src">→ publication</span>
+                    </a>
+                    <a class="chunk" href="#education">
+                        <span class="chunk-score">0.91</span>
+                        <span class="chunk-text"><strong>IIT Hyderabad</strong> — M.Tech, CGPA 9.5/10 · Academic Excellence Award</span>
+                        <span class="chunk-src">→ education</span>
+                    </a>
+                    <p class="console-cursor" aria-hidden="true">▊</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Systems ============ -->
+    <section class="section" id="systems">
+        <div class="container">
+            <p class="eyebrow">retrieved from: <span>production</span></p>
+            <h2 class="section-title">Systems that shipped</h2>
+            <p class="section-lede">Not demos — platforms and services running in production, with users on the other end.</p>
+
+            <div class="systems-grid">
+                <article class="system-card system-flagship">
+                    <div class="system-head">
+                        <span class="system-org">Qualcomm · Enterprise AI</span>
+                        <span class="system-when">2024 — present</span>
+                    </div>
+                    <h3>Enterprise RAG &amp; agentic-AI platform</h3>
+                    <p>
+                        The retrieval backbone for organization-wide knowledge: a data-source-agnostic
+                        ingestion pipeline (SharePoint, Jira, Confluence, custom sources) that onboards
+                        new sources with zero platform-specific code, feeding a vector layer that indexes
+                        millions of documents for low-latency search.
+                    </p>
+                    <ul class="system-points">
+                        <li>Hybrid retrieval — BM25 + dense embeddings — for relevance across every query type</li>
+                        <li>Source-level security: users only retrieve what platform-native permissions allow</li>
+                        <li>Delivered as a product: Chat UI, REST APIs, and an SDK teams build agents on</li>
+                    </ul>
+                    <p class="system-tags">RAG · agentic AI · vector databases · hybrid search · SDK</p>
+                </article>
+
+                <article class="system-card">
+                    <div class="system-head">
+                        <span class="system-org">Jio Platforms · AI CoE</span>
+                        <span class="system-when">2023 — 2024</span>
+                    </div>
+                    <h3>Trade-discount optimization</h3>
+                    <p>Demand forecasting + constrained optimization to set discounts that improve gross margin while hitting revenue targets. Published at IEEE ICDSAAI.</p>
+                    <p class="system-tags">forecasting · optimization · <a href="https://ieeexplore.ieee.org/document/10452543" target="_blank" rel="noopener">IEEE paper ↗</a></p>
+                </article>
+
+                <article class="system-card">
+                    <div class="system-head">
+                        <span class="system-org">Jio Platforms · AI CoE</span>
+                        <span class="system-when">2022 — 2023</span>
+                    </div>
+                    <h3>Return prediction at e-commerce scale</h3>
+                    <p>An end-to-end microservice forecasting return probability at item and cart level, contributing to a measurable reduction in return rates.</p>
+                    <p class="system-tags">XGBoost · FastAPI · Docker · MLflow</p>
+                </article>
+
+                <article class="system-card">
+                    <div class="system-head">
+                        <span class="system-org">Jio Platforms · AI CoE</span>
+                        <span class="system-when">2023 — 2024</span>
+                    </div>
+                    <h3>LLM-powered document extraction</h3>
+                    <p>Intelligent extraction from unstructured PDFs, images, and text — replacing manual data-entry workflows with LLM pipelines.</p>
+                    <p class="system-tags">LLMs · information extraction · unstructured data</p>
+                </article>
+
+                <article class="system-card">
+                    <div class="system-head">
+                        <span class="system-org">Xceedance · Insurance</span>
+                        <span class="system-when">2021 — 2022</span>
+                    </div>
+                    <h3>Insurance entity extraction</h3>
+                    <p>NLP pipeline extracting entities from contractual emails (70%+ accuracy at launch) and document extraction with YOLOv5 (80%+ operational accuracy).</p>
+                    <p class="system-tags">NLP · YOLOv5 · information retrieval</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <p class="eyebrow">retrieved from: <span>career</span></p>
+            <h2 class="section-title">Experience</h2>
+
+            <div class="timeline">
+                <article class="role">
+                    <div class="role-when">Sep 2024 — present</div>
+                    <div class="role-body">
+                        <h3>Senior Data Scientist <span class="role-org">· Qualcomm, Enterprise AI</span></h3>
+                        <p>Architecting the enterprise GenAI platform — ingestion, hybrid retrieval, permission-aware search, and the agentic chat platform (UI, APIs, SDK) teams across the organization build on.</p>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-when">Apr 2023 — Sep 2024</div>
+                    <div class="role-body">
+                        <h3>Senior Data Scientist <span class="role-org">· Jio Platforms, AI Center of Excellence</span></h3>
+                        <p>Led applied-ML initiatives for e-commerce and enterprise: trade-discount optimization (published at IEEE ICDSAAI), a customer-analytics platform powering fraud detection and cohort curation, and LLM-based extraction over unstructured data.</p>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-when">May 2022 — Mar 2023</div>
+                    <div class="role-body">
+                        <h3>Data Scientist <span class="role-org">· Jio Platforms, AI Center of Excellence</span></h3>
+                        <p>Built and shipped the return-prediction microservice for a large-scale e-commerce platform — production ML with FastAPI, Docker, and MLflow.</p>
+                    </div>
+                </article>
+                <article class="role">
+                    <div class="role-when">Jul 2021 — May 2022</div>
+                    <div class="role-body">
+                        <h3>Data Scientist <span class="role-org">· Xceedance, Information Retrieval</span></h3>
+                        <p>NLP for insurance: entity extraction from contractual emails and documents using transformer-based NLP and YOLOv5.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Publication ============ -->
+    <section class="pub-band" id="publication">
+        <div class="container pub-inner">
+            <p class="pub-label">Peer-reviewed</p>
+            <p class="pub-cite">
+                <strong>“Trade Discount Optimization for E-Commerce Platform.”</strong>
+                International Conference on Data Science, Agents &amp; Artificial Intelligence (ICDSAAI), IEEE.
+            </p>
+            <a class="btn btn-inverse" href="https://ieeexplore.ieee.org/document/10452543" target="_blank" rel="noopener">Read on IEEE Xplore ↗</a>
+        </div>
+    </section>
+
+    <!-- ============ Open source ============ -->
+    <section class="section" id="opensource">
+        <div class="container">
+            <p class="eyebrow">retrieved from: <span>github.com/heera-ai</span></p>
+            <h2 class="section-title">Open source &amp; teaching</h2>
+            <p class="section-lede">I learn in public — building retrieval systems from first principles and teaching what I find.</p>
+
+            <div class="projects-grid">
+                <article class="project">
+                    <h3><a href="https://github.com/heera-ai/vectordb" target="_blank" rel="noopener">vectordb</a></h3>
+                    <p>Build a vector database from scratch in Python — a step-by-step tutorial series, from brute-force numpy search to real embeddings and indexing.</p>
+                    <p class="project-meta">Python · tutorial series</p>
+                </article>
+                <article class="project">
+                    <h3><a href="https://github.com/heera-ai/github-profile-analyzer" target="_blank" rel="noopener">github-profile-analyzer</a></h3>
+                    <p>Analyzes GitHub profiles for recruiting insight — developer score, tech-stack breakdown, activity patterns, and an auto-generated recruiter summary. <a href="https://github-profile-analyzer-5rhk.onrender.com" target="_blank" rel="noopener">Live demo ↗</a></p>
+                    <p class="project-meta">Python · FastAPI</p>
+                </article>
+                <article class="project">
+                    <h3><a href="https://github.com/heera-ai/zvec-rag" target="_blank" rel="noopener">zvec-rag</a></h3>
+                    <p>RAG built on zvec, a local open-source vector database — retrieval without the managed-service bill.</p>
+                    <p class="project-meta">Python · RAG</p>
+                </article>
+                <article class="project">
+                    <h3><a href="https://github.com/heera-ai/ai-ml-data-science-book" target="_blank" rel="noopener">Exploring AI, ML &amp; Data Science</a></h3>
+                    <p>Source and content for my book — a practical guide from AI fundamentals through deep learning and AI ethics.</p>
+                    <p class="project-meta">book · in progress</p>
+                </article>
+                <article class="project">
+                    <h3><a href="https://github.com/heera-ai/LearnPython" target="_blank" rel="noopener">LearnPython</a></h3>
+                    <p>A Python course for AI, ML, and data-science learners — foundations through advanced applications.</p>
+                    <p class="project-meta">course · Jupyter</p>
+                </article>
+                <article class="project">
+                    <h3><a href="https://github.com/heera-ai/emotion_detection" target="_blank" rel="noopener">emotion_detection</a></h3>
+                    <p>Real-time facial-expression recognition from a webcam feed — CNN model served with Flask and live overlay. <a href="https://www.youtube.com/watch?v=skrUapHD4sg" target="_blank" rel="noopener">Demo ↗</a></p>
+                    <p class="project-meta">TensorFlow · OpenCV</p>
+                </article>
+            </div>
+
+            <p class="projects-more">
+                More on <a href="https://github.com/heera-ai" target="_blank" rel="noopener">GitHub ↗</a>
+                and <a href="https://www.youtube.com/@heera_ai" target="_blank" rel="noopener">YouTube ↗</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ Writing ============ -->
+    <section class="section section-alt" id="writing">
+        <div class="container">
+            <p class="eyebrow">retrieved from: <span>notes</span></p>
+            <h2 class="section-title">Writing</h2>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Populated by js/app.js from data/posts.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Skills ============ -->
+    <section class="section" id="skills">
+        <div class="container">
+            <p class="eyebrow">retrieved from: <span>toolbox</span></p>
+            <h2 class="section-title">Stack</h2>
+            <div class="stack">
+                <div class="stack-row">
+                    <h3 class="stack-label">GenAI &amp; retrieval</h3>
+                    <p class="stack-items">LLMs · RAG · Agentic AI · MCP · LangChain · LlamaIndex · Hugging Face · Sentence-Transformers · Elasticsearch · ChromaDB · Pinecone · Ollama</p>
+                </div>
+                <div class="stack-row">
+                    <h3 class="stack-label">ML &amp; data</h3>
+                    <p class="stack-items">Python · PySpark · SQL · PyTorch · TensorFlow · Scikit-learn · XGBoost · LightGBM · OpenCV · Pandas · NumPy</p>
+                </div>
+                <div class="stack-row">
+                    <h3 class="stack-label">Platform</h3>
+                    <p class="stack-items">FastAPI · Docker · MLflow · Airflow · Azure · Apache Spark · Git · MongoDB · Streamlit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Education ============ -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <p class="eyebrow">retrieved from: <span>foundations</span></p>
+            <h2 class="section-title">Education &amp; honors</h2>
+            <div class="edu-grid">
+                <article class="edu-card">
+                    <h3>IIT Hyderabad</h3>
+                    <p class="edu-degree">M.Tech, Biomedical Engineering · 2019 — 2021</p>
+                    <p class="edu-detail">CGPA 9.5/10 · Academic Excellence Award 2020–21</p>
+                </article>
+                <article class="edu-card">
+                    <h3>Government Engineering College, Ajmer</h3>
+                    <p class="edu-degree">B.Tech, Electronic Instrumentation &amp; Control · 2014 — 2018</p>
+                    <p class="edu-detail">6th merit, Rajasthan Technical University · GATE 2019 AIR 503 (Instrumentation)</p>
+                </article>
+            </div>
+            <p class="certs">
+                <span class="certs-label">Certifications:</span>
+                TensorFlow Developer (DeepLearning.AI) · AI Agents Fundamentals · Model Context Protocol — Introduction &amp; Advanced Topics · Fundamentals of Scalable Data Science · Advanced Machine Learning &amp; Signal Processing
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="contact-band" id="contact">
+        <div class="container contact-inner">
+            <p class="contact-kicker">query complete · 1 result</p>
+            <h2 class="contact-title">Building something around retrieval, agents, or applied ML?</h2>
+            <p class="contact-sub">Always open to good conversations — collaborations, speaking, or interesting problems.</p>
+            <div class="contact-actions">
+                <a class="btn btn-inverse" href="mailto:heeralallegha@gmail.com">heeralallegha@gmail.com</a>
+                <div class="contact-links">
+                    <a href="https://github.com/heera-ai" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/heera-lal-ai" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.youtube.com/@heera_ai" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>Heera Lal · Hyderabad, India</p>
+            <p class="footer-note">© <span id="year"></span> · this page is a retrieval system</p>
         </div>
     </footer>
 
-    <!-- Markdown Parser -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Blog reader overlay -->
+    <div class="reader" id="reader" hidden>
+        <div class="reader-panel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+            <button class="reader-close" id="readerClose" aria-label="Close article">✕</button>
+            <article class="reader-article" id="readerBody"></article>
+        </div>
+    </div>
 
-    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
