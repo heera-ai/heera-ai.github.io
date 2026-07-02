@@ -87,12 +87,13 @@
       "role": "Senior Data Scientist",
       "company": "Jio Platforms Limited",
       "location": "Hyderabad, India",
-      "period": "Apr 2023 - Sep 2024",
+      "period": "May 2022 - Sep 2024",
       "description": "AI Center of Excellence (AICoE) — production ML for large-scale e-commerce.",
       "highlights": [
+        "Built an end-to-end return-prediction microservice for a large-scale e-commerce platform, forecasting return probability at item and cart levels; contributed to measurable reduction in return rates.",
+        "Implemented ML-driven trade discount optimization combining forecasting and constrained optimization, improving gross margins while meeting revenue targets — published at IEEE ICDSAAI.",
         "Designed a customer analytics platform for cohort curation enabling fraud detection, premium customer identification, and graph-based community detection.",
-        "Developed an intelligent information extraction system processing unstructured data (PDFs, images, text) using LLMs, significantly accelerating data extraction vs. manual workflows.",
-        "Implemented ML-driven trade discount optimization combining forecasting and constrained optimization, improving gross margins while meeting revenue targets."
+        "Developed an intelligent information extraction system processing unstructured data (PDFs, images, text) using LLMs, significantly accelerating data extraction vs. manual workflows."
       ],
       "technologies": [
         "Python",
@@ -104,23 +105,6 @@
     },
     {
       "id": 3,
-      "role": "Data Scientist",
-      "company": "Jio Platforms Limited",
-      "location": "Hyderabad, India",
-      "period": "May 2022 - Mar 2023",
-      "description": "AI Center of Excellence (AICoE) — production ML for large-scale e-commerce.",
-      "highlights": [
-        "Built an end-to-end return-prediction microservice for a large-scale e-commerce platform, forecasting return probability at item and cart levels; contributed to measurable reduction in return rates."
-      ],
-      "technologies": [
-        "Python",
-        "XGBoost",
-        "FastAPI",
-        "MLflow"
-      ]
-    },
-    {
-      "id": 4,
       "role": "Data Scientist",
       "company": "Xceedance India Pvt Ltd",
       "location": "Gurugram, India",
